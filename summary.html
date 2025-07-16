@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>📘 Session Summary | Finance Cockpit</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans">
+  <!-- Header -->
+  <header class="bg-blue-700 text-white p-6 shadow">
+    <h1 class="text-2xl font-semibold">📘 Session Summary</h1>
+    <p class="text-sm">Complete overview of your current financial session</p>
+  </header>
+
+  <!-- Summary Panel -->
+  <section class="max-w-3xl mx-auto mt-8 bg-white p-6 rounded-lg shadow space-y-4">
+    <h2 class="text-xl font-medium mb-2">🧮 Financial Snapshot</h2>
+    <div class="grid grid-cols-2 gap-6 text-gray-800">
+      <div class="bg-gray-50 p-4 rounded-lg border">
+        <h3 class="font-semibold text-blue-700">💵 Income</h3>
+        <p>Total: ₹55,000</p>
+        <p>Sources: 3</p>
+      </div>
+      <div class="bg-gray-50 p-4 rounded-lg border">
+        <h3 class="font-semibold text-blue-700">💸 Expenses</h3>
+        <p>Total: ₹27,200</p>
+        <p>Categories: 6</p>
+      </div>
+      <div class="bg-gray-50 p-4 rounded-lg border col-span-2">
+        <h3 class="font-semibold text-green-600">📊 Net Surplus</h3>
+        <p class="text-xl font-bold">₹27,800</p>
+        <p>Great job! You're operating with surplus liquidity.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Corpus Goal Status -->
+  <section class="max-w-3xl mx-auto mt-6 bg-white p-6 rounded-lg shadow">
+    <h2 class="text-xl font-medium mb-4">🎯 Corpus Goals Progress</h2>
+    <ul class="list-disc pl-5 space-y-2 text-gray-700">
+      <li>Retirement Corpus: ₹5 Cr target by 2045 – 12.5% CAGR projected</li>
+      <li>Child’s Education: ₹25L target by 2035 – 60% funded</li>
+    </ul>
+  </section>
+
+  <!-- Export Options -->
+  <section class="max-w-3xl mx-auto mt-6 bg-white p-6 rounded-lg shadow space-y-4">
+    <h2 class="text-xl font-medium mb-4">📤 Export & Wrap Up</h2>
+    <button class="bg-blue-700 text-white px-4 py-2 rounded hover:bg-blue-800">💾 Export Session Snapshot (JSON)</button>
+    <button class="bg-gray-600 text-white px-4 py-2 rounded hover:bg-gray-700">🖨️ Download Summary as PDF</button>
+  </section>
+<button onclick="handleLogout()" class="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700">
+  🚪 Logout
+</button>
+
+<script>
+  function handleLogout() {
+    localStorage.removeItem("userEmail");
+    localStorage.removeItem("userPassword");
+    alert("You’ve been logged out.");
+    window.location.href = "login.html";
+  }
+</script>
+  <!-- Footer Navigation -->
+  <footer class="max-w-3xl mx-auto mt-6 mb-12 flex justify-between">
+    <button onclick="location.href='dashboard.html'" class="text-blue-700 hover:underline">⬅️ Back to Dashboard</button>
+    <button onclick="location.href='index.html'" class="text-red-600 hover:underline">🔁 End Session</button>
+  </footer>
+</body>
+</html>

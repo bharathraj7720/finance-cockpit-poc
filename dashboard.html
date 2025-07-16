@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Finance Cockpit | Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans">
+  <!-- Header -->
+  <header class="bg-indigo-600 text-white p-6 shadow">
+    <h1 class="text-2xl font-semibold">📘 Hello, Bharath</h1>
+    <p class="text-sm">Session: July2025Plan | Location: Uppal, TG</p>
+  </header>
+
+  <!-- Surplus Panel -->
+  <section class="max-w-3xl mx-auto mt-8 bg-white p-4 rounded shadow">
+    <h2 class="text-xl font-bold text-green-700">🧮 Monthly Net Surplus: ₹27,800</h2>
+    <p class="text-gray-700">Great liquidity balance—ready for deployment.</p>
+  </section>
+
+  <!-- Module Cards -->
+  <section class="max-w-5xl mx-auto mt-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div class="bg-white p-4 rounded shadow border">
+      <h3 class="text-lg font-semibold">💵 Income</h3>
+      <p class="text-gray-600">Total: ₹55,000<br/>Sources: 3</p>
+      <button onclick="location.href='module-income.html'" class="mt-2 text-indigo-600 hover:underline">View Details</button>
+    </div>
+
+    <div class="bg-white p-4 rounded shadow border">
+      <h3 class="text-lg font-semibold">💸 Expenses</h3>
+      <p class="text-gray-600">Total: ₹27,200<br/>Categories: 6</p>
+      <button onclick="location.href='module-expense.html'" class="mt-2 text-indigo-600 hover:underline">View Details</button>
+    </div>
+
+    <div class="bg-white p-4 rounded shadow border">
+      <h3 class="text-lg font-semibold">🧾 Loans</h3>
+      <p class="text-gray-600">Active: 2<br/>EMI: ₹12,000</p>
+      <button onclick="location.href='module-loan.html'" class="mt-2 text-indigo-600 hover:underline">View Details</button>
+    </div>
+
+    <div class="bg-white p-4 rounded shadow border">
+      <h3 class="text-lg font-semibold">📊 Mutual Funds</h3>
+      <p class="text-gray-600">SIP: ₹15,500<br/>Funds: 4</p>
+      <button onclick="location.href='module-mutual.html'" class="mt-2 text-indigo-600 hover:underline">View Details</button>
+    </div>
+
+    <div class="bg-white p-4 rounded shadow border">
+      <h3 class="text-lg font-semibold">📈 Stocks</h3>
+      <p class="text-gray-600">Portfolio: ₹3.2L<br/>Holdings: 9</p>
+      <button onclick="location.href='module-stock.html'" class="mt-2 text-indigo-600 hover:underline">View Details</button>
+    </div>
+
+    <div class="bg-white p-4 rounded shadow border">
+      <h3 class="text-lg font-semibold">📦 Custom Assets</h3>
+      <p class="text-gray-600">Gold, PPF, SSA<br/>Value: ₹2.75L</p>
+      <button onclick="location.href='module-custom.html'" class="mt-2 text-indigo-600 hover:underline">View Details</button>
+    </div>
+  </section>
+
+  <!-- Action Buttons -->
+  <section class="max-w-3xl mx-auto mt-8 flex flex-wrap justify-center gap-4">
+    <button onclick="location.href='summary.html'" class="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700">📄 Session Summary</button>
+    <button onclick="location.href='corpus.html'" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">🎯 Corpus Planning</button>
+    <button onclick="location.href='report-generator.html'" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">📑 AI Report</button>
+    <button onclick="alert('Session exported as JSON')" class="bg-gray-600 text-white px-4 py-2 rounded hover:bg-gray-700">💾 Export Session</button>
+  </section>
+  <button onclick="handleLogout()" class="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700">
+  🚪 Logout
+</button>
+
+<script>
+  function handleLogout() {
+    localStorage.removeItem("userEmail");
+    localStorage.removeItem("userPassword");
+    alert("You’ve been logged out.");
+    window.location.href = "login.html";
+  }
+</script>
+</body>
+</html>
